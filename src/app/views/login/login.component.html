@@ -1,0 +1,70 @@
+<section class="center-container">
+    <div class="fundo">
+        <ng-lottie 
+            [styles]="rockets"
+            [options]="rocket" 
+            (animationCreated)="animationCreated($event)">
+        </ng-lottie> 
+        <mat-card class="example-card">
+            <div class="logo">
+                <div class="circulo lime"><span> MD </span></div>
+                <div class="custon-text">My Dragons</div>
+            </div>
+            <mat-card-content>
+                <mat-tab-group mat-align-tabs="center">
+                    <mat-tab label="Logar">
+                        <form class="example-form">
+                            <mat-form-field class="example-full-width">
+                                <mat-label>E-mail</mat-label>
+                                <input matInput id="emailLogin" type="email" placeholder="seuemail@gmail.com" name="email" [(ngModel)]="user.email">
+                                <mat-icon matSuffix>alternate_email</mat-icon>
+                            </mat-form-field>
+                            
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Senha</mat-label>
+                                <input matInput id="senhaLogin" type="password" placeholder="Senha" name="senha" [(ngModel)]="user.senha">
+                                <mat-icon matSuffix>vpn_key</mat-icon>
+                            </mat-form-field>
+                            <div class="button-container">
+                                <button mat-fab color="primary" type="submit" (click)="loginUser()">
+                                    <mat-icon>arrow_forward</mat-icon>
+                                </button>
+                            </div>
+                        </form>
+                    </mat-tab>
+                    <mat-tab label="Registrar">
+                        <form class="example-form">
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Nome</mat-label>
+                                <input matInput id="nameRegister" placeholder="Nome Completo" name="name" [(ngModel)]="register.name">
+                                <mat-icon matSuffix>face</mat-icon>
+                            </mat-form-field>
+                            
+                            <mat-form-field class="example-full-width">
+                                <mat-label>E-mail</mat-label>
+                                <input matInput id="emailRegister" type="email" placeholder="seuemail@gmail.com" name="email" [(ngModel)]="register.email">
+                                <mat-icon matSuffix>alternate_email</mat-icon>
+                            </mat-form-field>
+    
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Senha</mat-label>
+                                <input matInput id="senhaRegister" type="password" placeholder="Senha" name="password" [(ngModel)]="register.password">
+                                <mat-icon matSuffix>vpn_key</mat-icon>
+                            </mat-form-field>
+                            <mat-form-field class="example-full-width">
+                                    <mat-label>Confirmar Senha</mat-label>
+                                    <input matInput id="senhaRegisterConfirm" type="password" placeholder="Confirmar Senha" name="passwordConfirm" [(ngModel)]="register.passwordConfirm">
+                                    <mat-icon matSuffix>vpn_key</mat-icon>
+                                </mat-form-field>
+                            <div class="button-container">
+                                <button mat-fab color="primary" type="submit" (click)="registerUser()">
+                                    <mat-icon>arrow_forward</mat-icon>
+                                </button>
+                            </div>
+                        </form>
+                    </mat-tab>
+                </mat-tab-group>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</section>
