@@ -1,0 +1,30 @@
+section {
+  max-width: 600px;
+  margin: 5rem auto;
+  form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 5px;
+  
+    background-color: rgba(0, 0, 0, 0.4);
+  
+    input {
+      width: 95%;
+      background: none;
+      border: none;
+      font-size: 1rem;
+      color: #FFFFFF;
+
+      outline: none;
+
+      &::placeholder {
+        color: #cccccc;
+      }
+    }
+    mat-icon {
+      color: #FFFFFF;
+    }
+  }
+}

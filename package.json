@@ -1,5 +1,5 @@
 {
-  "name": "my-dragons",
+  "name": "pokedex",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

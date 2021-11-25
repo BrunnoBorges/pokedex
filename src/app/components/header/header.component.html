@@ -1,10 +1,16 @@
 <mat-toolbar color="primary" class="menu">
     <div>
         <div class="logo">
-            <div class="circulo lime"><span> MD </span></div>
+            <div>
+                <ng-lottie 
+                    [styles]="pokebolaStyle"
+                    [options]="pokebola" 
+                    (animationCreated)="animationCreated($event)">
+                </ng-lottie> 
+            </div>
             <div class="custon-text">
                 <button mat-button color="basic" (click)="goToHome()">
-                        My Dragons
+                    Pokémon
                 </button>
             </div>
         </div>

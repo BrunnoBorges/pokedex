@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  listDragons: 'http://5c4b2a47aa8ee500142b4887.mockapi.io'
+  pokemonList: 'https://pokeapi.co/api/v2'
 };
 
 /*

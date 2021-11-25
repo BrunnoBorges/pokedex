@@ -7,8 +7,13 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 
 import { HeaderComponent } from './header.component';
 
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
 
 
+export function playerFactory() {
+  return player;
+}
 @NgModule({
   declarations: [
     HeaderComponent
@@ -17,7 +22,8 @@ import { HeaderComponent } from './header.component';
     CommonModule,
     MatButtonModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    [LottieModule.forRoot({ player: playerFactory })],
   ],
   exports: [
     HeaderComponent

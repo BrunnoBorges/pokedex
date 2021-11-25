@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DragonsService } from 'src/app/service/dragons/dragons.service';
+import { PokemonService } from 'src/app/service/pokemon/pokemon.service';
 
 @Component({
   selector: 'app-home',
@@ -8,22 +8,16 @@ import { DragonsService } from 'src/app/service/dragons/dragons.service';
 })
 export class HomeComponent implements OnInit {
 
-  dragons: any;
-  name: string;
-  id: string;
-  type: string;
-  createdAt: string;
-
-  constructor(private dragonsService: DragonsService) { 
+  constructor() { 
 
   }
 
   ngOnInit(): void {
-    this.dragonsService.getList().subscribe((data) => {
-      this.dragons = data;
-    }, (error) => {
-      console.log('error', error)
-    });
+  
+  }
+
+  delete() {
+    
   }
 
 }

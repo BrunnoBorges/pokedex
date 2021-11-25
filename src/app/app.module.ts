@@ -7,17 +7,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthService } from './service/auth/auth.service';
+import { HeaderModule } from './components/header/header.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent  
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    HeaderModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

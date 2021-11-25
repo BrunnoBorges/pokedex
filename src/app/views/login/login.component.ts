@@ -24,11 +24,15 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  rocket: AnimationOptions = {
-    path: '/assets/dragon2.json',
+  pikachu: AnimationOptions = {
+    path: '/assets/pikachu.json',
   };
 
-  rockets: Partial<CSSStyleDeclaration> = {
+  pokebola: AnimationOptions = {
+    path: '/assets/pokebola.json',
+  };
+
+  pikachuStyle: Partial<CSSStyleDeclaration> = {
     width: '15rem',
     height: '15rem',
     position: 'absolute',
@@ -37,6 +41,12 @@ export class LoginComponent implements OnInit {
     right: '0',
     margin: 'auto'
   };
+
+  pokebolaStyle: Partial<CSSStyleDeclaration> = {
+    width: '2rem',
+    height: '2rem',
+    margin: '0 1rem'
+  }
 
   animationCreated(animationItem: AnimationItem): void {
     console.log(animationItem);

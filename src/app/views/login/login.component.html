@@ -1,14 +1,20 @@
 <section class="center-container">
     <div class="fundo">
         <ng-lottie 
-            [styles]="rockets"
-            [options]="rocket" 
+            [styles]="pikachuStyle"
+            [options]="pikachu" 
             (animationCreated)="animationCreated($event)">
         </ng-lottie> 
         <mat-card class="example-card">
             <div class="logo">
-                <div class="circulo lime"><span> MD </span></div>
-                <div class="custon-text">My Dragons</div>
+                <div>
+                    <ng-lottie 
+                        [styles]="pokebolaStyle"
+                        [options]="pokebola" 
+                        (animationCreated)="animationCreated($event)">
+                    </ng-lottie> 
+                </div>
+                <div class="custon-text">Pokémon</div>
             </div>
             <mat-card-content>
                 <mat-tab-group mat-align-tabs="center">

@@ -1,4 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body { 
+  height: 100%;
+  background: conic-gradient(
+    rgba(152,214,243,0.5),
+    rgba(254,162,177,0.5),
+    rgba(247,241,250,0.5),
+    rgba(247,241,250,0.5),
+    rgba(152,214,243,0.5),
+    rgba(152,214,243,0.5)
+  );
+  position: relative;
+}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
