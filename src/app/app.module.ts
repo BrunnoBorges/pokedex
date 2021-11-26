@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthService } from './service/auth/auth.service';
 import { HeaderModule } from './components/header/header.module';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HeaderModule } from './components/header/header.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    HeaderModule
+    HeaderModule,
+    RouterModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

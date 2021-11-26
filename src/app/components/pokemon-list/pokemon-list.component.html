@@ -1,15 +1,27 @@
 <section>
-  <mat-card class="example-card">
-    <mat-card-header>
-      <!-- <div mat-card-avatar class="example-header-image">
-        <mat-icon aria-hidden="false" aria-label="Example home icon">edit</mat-icon>
-        <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
-      </div> -->
-      <mat-card-title>Nome</mat-card-title>
-      <mat-card-subtitle>Descricao</mat-card-subtitle>
-    </mat-card-header>
-    <div class="image">
-      <img src="" alt="Photo of a Shiba Inu">
-    </div>
-  </mat-card>
+  <main class="main">
+    <app-search (emmitSearch)="getSearch($event)"></app-search>
+  </main>
+  <main class="main">
+    <ng-template ngFor let-pokemon [ngForOf]="getAllPokemons"> 
+      <!-- <a [routerLink]="['detalhes']" [queryParams]="{id: pokemon.status.id}" *ngIf="pokemon.status"> -->
+        <a [routerLink]="['detalhes', pokemon.status.id]" *ngIf="pokemon.status">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <!-- <div mat-card-avatar class="example-header-image">
+              <mat-icon aria-hidden="false" aria-label="Example home icon">edit</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+            </div> -->
+            <mat-card-title>{{pokemon.name}}</mat-card-title>
+            <div *ngFor="let value of pokemon?.status?.types" class="tipo">
+              <mat-card-subtitle>{{value.type.name}}</mat-card-subtitle>
+            </div>
+          </mat-card-header>
+          <div class="image">
+            <img [src]="pokemon.status.sprites.other.dream_world.front_default" alt="Photo of a Shiba Inu">
+          </div>
+        </mat-card>
+      </a>
+    </ng-template>
+  </main>
 </section>

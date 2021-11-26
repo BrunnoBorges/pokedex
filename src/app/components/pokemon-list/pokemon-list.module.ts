@@ -5,6 +5,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import { SearchModule } from '../search/search.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -15,7 +17,9 @@ import { MatIconModule } from '@angular/material/icon';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    SearchModule,
+    RouterModule
   ],
   exports: [PokemonListComponent]
 })

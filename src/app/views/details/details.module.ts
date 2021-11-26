@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { DetailsRoutingModule } from './details-routing.module';
 import { DetailsComponent } from './details.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -11,7 +15,11 @@ import { DetailsComponent } from './details.component';
   ],
   imports: [
     CommonModule,
-    DetailsRoutingModule
+    DetailsRoutingModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule
   ]
 })
 export class DetailsModule { }

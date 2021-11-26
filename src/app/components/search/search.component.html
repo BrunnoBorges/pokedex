@@ -1,6 +1,6 @@
 <section>
   <form >
-    <input type="text" placeholder="Buscar Pokémon ..."/>
+    <input type="text" #input (keyup)="search(input.value)" placeholder="Buscar Pokémon ..."/>
     <mat-icon matSuffix>search</mat-icon>
   </form>
 </section>

@@ -9,7 +9,7 @@ import { PokemonService } from 'src/app/service/pokemon/pokemon.service';
 export class HomeComponent implements OnInit {
 
   constructor() { 
-
+  
   }
 
   ngOnInit(): void {

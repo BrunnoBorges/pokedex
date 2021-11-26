@@ -11,7 +11,7 @@ const routes: Routes = [
     loadChildren: () => import('./views/home/home.module').then(m => m.HomeModule)
   },
   {
-    path: 'detalhes',
+    path: 'home/detalhes/:id',
     loadChildren: () => import('./views/details/details-routing.module').then(m => m.DetailsRoutingModule)
   }
 ];
