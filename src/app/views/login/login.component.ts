@@ -53,12 +53,11 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser() {
-    console.log('--> Logou <--', this.user);
     this.authService.fazerLogin(this.user);
   }
 
   registerUser() {
-    console.log('--> Cadastrou <--');
+    // console.log('--> Cadastrou <--');
     // this.authService.fazerCadastro(this.register);
   }
 }

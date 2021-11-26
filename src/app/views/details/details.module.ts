@@ -7,6 +7,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -19,7 +22,11 @@ import { MatIconModule } from '@angular/material/icon';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatIconModule
-  ]
+    MatIconModule,
+    MatDividerModule,
+    MatProgressBarModule,
+    MatButtonModule
+  ],
+  exports: [DetailsComponent]
 })
 export class DetailsModule { }

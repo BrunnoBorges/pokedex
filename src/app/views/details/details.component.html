@@ -1,25 +1,36 @@
 <main>
-  <section class="pokemon__names">
-    <h1>{{pokemon[0].name}}</h1>
-    <h1>{{pokemon[1].names[0].name}}</h1>
-  </section>
-
-  <section class="pokemon__status">
-    <img [src]="pokemon[0].sprites.other.dream_world.front_default" alt="">
-
-    <article class="pokemon__status__statistics">
-      <section>
-        <h3>Estatísticas</h3>
-
-        <ol>
-          <li *ngFor="let value of pokemon[0].stats">
-            {{value.stat.name}} <strong> {{value.base_stat}} </strong>
-          </li>
-        </ol>
-        
-        <!-- <a [routerLink]="['/']" class="btn btn__secondary"> Voltar </a> -->
-
-      </section>
-    </article>
-  </section>
+  <mat-card>
+    <div class="container-image">
+      <img [src]="pokemon[0].sprites.other.dream_world.front_default" alt="" />
+    </div>
+    <section class="pokemon__names">
+      <mat-card-title>{{ pokemon[0].name }} <span>Nome</span> </mat-card-title>
+      <!-- <mat-card-subtitle>Nome</mat-card-subtitle> -->
+    </section>
+    <section class="pokemon__names">
+      <mat-card-title>{{ pokemon[1].names[0].name }} <span>Nome Japonês</span></mat-card-title>
+    </section>
+    <mat-divider inset></mat-divider>
+    <section class="pokemon__status">
+      <article class="pokemon__status__statistics">
+        <section>
+          <mat-card-title>Estatísticas</mat-card-title>
+          <ol>
+            <li *ngFor="let value of pokemon[0].stats">
+              {{ value.stat.name }} <strong> {{ value.base_stat }} </strong>
+            </li>
+          </ol>
+        </section>
+      </article>
+    </section>
+    <mat-divider inset></mat-divider>
+    <mat-card-actions>
+      <button mat-icon-button color="warn" [routerLink]="['/home']">
+        <mat-icon>west</mat-icon>
+      </button>
+    </mat-card-actions>
+    <mat-card-footer>
+      
+    </mat-card-footer>
+  </mat-card>
 </main>

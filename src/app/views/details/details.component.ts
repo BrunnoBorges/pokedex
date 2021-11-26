@@ -12,10 +12,10 @@ import { PokemonService } from '../../service/pokemon/pokemon.service'
 export class DetailsComponent implements OnInit {
 
   
-  // private urlPokemon: string = `${environment.pokemonList}/pokemon`;
-  // private urlName: string = `${environment.pokemonList}/pokemon-species`;
-  private urlPokemon: string = 'https://pokeapi.co/api/v2/pokemon';
-  private urlName: string = 'https://pokeapi.co/api/v2/pokemon-species';
+  private urlPokemon: string = `${environment.pokemonList}/pokemon`;
+  private urlName: string = `${environment.pokemonList}/pokemon-species`;
+  // private urlPokemon: string = 'https://pokeapi.co/api/v2/pokemon';
+  // private urlName: string = 'https://pokeapi.co/api/v2/pokemon-species';
 
   public pokemon: any;
 
@@ -26,19 +26,20 @@ export class DetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.pokemon;
+    this.getpokemon()
   }
-
   getpokemon() {
     const id = this.activatedRoute.snapshot.params['id']; 
     const pokemon = this.pokeservice.apiGetPokemons(`${this.urlPokemon}/${id}`);
     const name = this.pokeservice.apiGetPokemons(`${this.urlName}/${id}`);
-
+    
     return forkJoin([pokemon, name]).subscribe( res => {
-      console.log('--->', res)
       this.pokemon = res;
+      console.log('pokemon', res);
     })
 
      
   }
+
 
 }

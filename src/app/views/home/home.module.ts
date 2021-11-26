@@ -7,6 +7,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { PokemonService } from 'src/app/service/pokemon/pokemon.service';
 import { PokemonListModule } from 'src/app/components/pokemon-list/pokemon-list.module';
+import { DetailsModule } from '../details/details.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PokemonListModule } from 'src/app/components/pokemon-list/pokemon-list.
     CommonModule,
     HomeRoutingModule,
     MatSelectModule,
-    PokemonListModule
+    PokemonListModule,
+    DetailsModule
   ],
   providers: [PokemonService]
 })
